@@ -33,6 +33,7 @@ import L from 'leaflet';
 import { useApp } from '../../context/AppContext';
 import { GeoScanRecord, FarmPlot, PlotActivity } from '../../types';
 import { AI_SCAN_PRESETS } from '../../data/mockData';
+import { LINK_MASTER_CONFIG } from '../../config/linkMasterConfig';
 
 export const FarmMapView: React.FC = () => {
   const {
@@ -135,9 +136,9 @@ export const FarmMapView: React.FC = () => {
 
   // Tile layer URLs
   const tileUrls = {
-    satellite: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-    street: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    terrain: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
+    satellite: LINK_MASTER_CONFIG.mapTiles.satellite,
+    street: LINK_MASTER_CONFIG.mapTiles.street,
+    terrain: LINK_MASTER_CONFIG.mapTiles.terrain,
   };
 
   // Initialize Map

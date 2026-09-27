@@ -1,3 +1,4 @@
+import { IMAGE_PATHS } from '../../config/imageMasterConfig';
 import React, { useState } from 'react';
 import { X, Send, Image as ImageIcon, Sparkles } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
@@ -24,7 +25,7 @@ export const CreatePostModal: React.FC = () => {
       crop,
       category,
       image: includeDemoPhoto
-        ? '/src/assets/images/chili_anthracnose_leaf_1790266562913.jpg'
+        ? IMAGE_PATHS.chiliLeaf
         : undefined,
     });
 

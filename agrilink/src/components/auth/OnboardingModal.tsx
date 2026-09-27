@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { IMAGE_PATHS } from '../../config/imageMasterConfig';
 import {
   X,
   User,
@@ -463,7 +464,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({
                     {/* Card Holder & Photo */}
                     <div className="relative z-10 flex items-center gap-3">
                       <img
-                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80"
+                        src={IMAGE_PATHS.farmerAvatar}
                         alt="MyKad Portrait"
                         className="w-12 h-14 object-cover rounded-lg border-2 border-white/60 shadow-md"
                       />
@@ -511,7 +512,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({
                       }`}
                     >
                       <img
-                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80"
+                        src={IMAGE_PATHS.farmerAvatarLarge}
                         alt="Live Face Viewfinder"
                         className={`w-28 h-40 object-cover rounded-[50%] transition-opacity ${
                           isScanningFace ? 'opacity-85' : 'opacity-60'
@@ -574,7 +575,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({
               {/* Confirmed Profile Card */}
               <div className="bg-white border border-stone-200 p-4 rounded-2xl text-left flex items-center gap-3.5 shadow-xs">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80"
+                  src={IMAGE_PATHS.farmerAvatar}
                   alt="Verified Portrait"
                   className="w-14 h-14 rounded-full object-cover border-2 border-emerald-600 shadow-sm shrink-0"
                 />

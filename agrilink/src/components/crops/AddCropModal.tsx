@@ -1,3 +1,4 @@
+import { IMAGE_PATHS } from '../../config/imageMasterConfig';
 import React, { useState } from 'react';
 import { X, Sprout, Check, ArrowRight, ArrowLeft } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
@@ -21,12 +22,12 @@ export const AddCropModal: React.FC = () => {
   if (!isAddCropOpen) return null;
 
   const cropPresets = [
-    { name: 'Chili', variety: 'Kulai F1 Hybrid', image: '/src/assets/images/chili_anthracnose_leaf_1790266562913.jpg' },
-    { name: 'Paddy Rice', variety: 'MR297 Fragrant', image: '/src/assets/images/rice_paddy_blast_leaf_1790266574580.jpg' },
-    { name: 'Durian', variety: 'Musang King (D197)', image: '/src/assets/images/malaysia_demo_farm_1790266584652.jpg' },
-    { name: 'Tomato', variety: 'Red Ruby Beefsteak', image: 'https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=600&auto=format&fit=crop&q=80' },
-    { name: 'Sweet Corn', variety: 'Honey Jean Hybrid', image: 'https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=600&auto=format&fit=crop&q=80' },
-    { name: 'Soybean', variety: 'Anjasmoro Golden', image: 'https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=600&auto=format&fit=crop&q=80' },
+    { name: 'Chili', variety: 'Kulai F1 Hybrid', image: IMAGE_PATHS.chiliLeaf },
+    { name: 'Paddy Rice', variety: 'MR297 Fragrant', image: IMAGE_PATHS.riceBlast },
+    { name: 'Durian', variety: 'Musang King (D197)', image: IMAGE_PATHS.farmOverview },
+    { name: 'Tomato', variety: 'Red Ruby Beefsteak', image: IMAGE_PATHS.plantTomato },
+    { name: 'Sweet Corn', variety: 'Honey Jean Hybrid', image: IMAGE_PATHS.plantCorn },
+    { name: 'Soybean', variety: 'Anjasmoro Golden', image: IMAGE_PATHS.soybean },
   ];
 
   const handleSelectPreset = (preset: typeof cropPresets[0]) => {
