@@ -1,0 +1,6 @@
+{
+  "name": "AgriLink",
+  "description": "Offline-first agricultural operating system connecting crop monitoring, AI health analysis, mentor advisory, and supplier marketplace.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
